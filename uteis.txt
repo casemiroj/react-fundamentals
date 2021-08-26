@@ -1,0 +1,13 @@
+~ Babel -> Transpilador
+--Dependencias
+@babel/core -> Coração do babel
+@babel/preset-env -> Preset padrão do babel
+@babel/preset-react -> Preset de React do babel
+@babel/cli -> Command line do babel
+--Comandos
+yarn babel {arquivo ou pasta} -d {arquivo ou pasta compilados}
+
+~ React
+--Dependencias
+react -> Coração do react
+react-dom -> Onde sera renderizado
