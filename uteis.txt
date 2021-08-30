@@ -16,6 +16,7 @@ webpack -> Coração do webpack
 webpack-cli -> Command line do Webpack
 html-webpack-plugin -> Injeta dinamicamente o nome do bundle no html
 clean-webpack-plugin -> Limpa pos bundles antigos da pasta
+webpack-dev-server -> Cria servidor local de desenvolvimento
 
 --Comandos
 yarn webpack -> Gera o bundle
