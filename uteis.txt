@@ -4,6 +4,7 @@
 @babel/preset-env -> Preset padrão do babel
 @babel/preset-react -> Preset de React do babel
 @babel/cli -> Command line do babel
+babel-loader -> Transpilador de todo tipo de código que o webpack não entende
 
 --Comandos
 yarn babel {arquivo ou pasta} -d {arquivo ou pasta compilados}
