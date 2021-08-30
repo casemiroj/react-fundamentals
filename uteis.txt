@@ -1,13 +1,26 @@
-~ Babel -> Transpilador
+-----------------------Babel -> Transpilador
 --Dependencias
 @babel/core -> Coração do babel
 @babel/preset-env -> Preset padrão do babel
 @babel/preset-react -> Preset de React do babel
 @babel/cli -> Command line do babel
+
 --Comandos
 yarn babel {arquivo ou pasta} -d {arquivo ou pasta compilados}
 
-~ React
+
+-----------------------WEBPACK -> Cria o bundle (Todos os arquivos criado em um unico)
+--Dependencias
+webpack -> Coração do webpack
+webpack-cli -> Command line do Webpack
+html-webpack-plugin -> Injeta dinamicamente o nome do bundle no html
+clean-webpack-plugin -> Limpa pos bundles antigos da pasta
+
+--Comandos
+yarn webpack -> Gera o bundle
+
+
+-----------------------React
 --Dependencias
 react -> Coração do react
 react-dom -> Onde sera renderizado
