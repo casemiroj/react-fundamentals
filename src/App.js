@@ -5,7 +5,7 @@ import Header from './Header';
 function App() {
   return (
     <>
-      <Header title="My blog">
+      <Header>
         <h2>Posts da Semana</h2>
       </Header>
 

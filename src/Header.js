@@ -11,6 +11,10 @@ export default function Header({ title, children}) {
 }
 
 Header.propTypes = {
-  title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  title: PropTypes.string,
+  children: PropTypes.node,
+}
+
+Header.defaultProps = {
+  title: 'JStack Blog',
 }
