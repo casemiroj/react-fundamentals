@@ -1,4 +1,5 @@
 import React from 'react';
+import Post from './Post';
 
 function App() {
   return (
@@ -8,34 +9,22 @@ function App() {
 
       <hr />
 
-      <article>
-        <strong>Titulo da noticia</strong><br />
-        <small>Subtitulo da noticia</small>
-      </article>
-
-      <article>
-        <strong>Titulo da noticia</strong><br />
-        <small>Subtitulo da noticia</small>
-      </article>
-
-      <article>
-        <strong>Titulo da noticia</strong><br />
-        <small>Subtitulo da noticia</small>
-      </article>
-
-      <article>
-        <strong>Titulo da noticia</strong><br />
-        <small>Subtitulo da noticia</small>
-      </article>
-
-      <article>
-        <strong>Titulo da noticia</strong><br />
-        <small>Subtitulo da noticia</small>
-      </article>
-      <article>
-        <strong>Titulo da noticia</strong><br />
-        <small>Subtitulo da noticia</small>
-      </article>
+      <Post 
+        title='Titulo da noticia 01' 
+        subtitle='Subtitulo da noticia 01'
+      />
+      <Post 
+        title='Titulo da noticia 02' 
+        subtitle='Subtitulo da noticia 02'
+      />
+      <Post 
+        title='Titulo da noticia 03' 
+        subtitle='Subtitulo da noticia 03'
+      />
+      <Post 
+        title='Titulo da noticia 04' 
+        subtitle='Subtitulo da noticia 04'
+      />
     </>
   );
 }
