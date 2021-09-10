@@ -16,7 +16,8 @@ function App() {
       id: Math.random(),
       title: `Title#0${prevState.length + 1}`, 
       subtitle: `Subtitle#0${prevState.length + 1}`, 
-      likes: 20
+      likes: 20,
+      read: false
     }
     ]);
   }
@@ -41,12 +42,8 @@ function App() {
       {posts.map(post => (
         <Post
           key={post.id}
-          title={post.title}
           onRemove={handleRemovePost}
-          subtitle={post.subtitle}
-          likes={post.likes}
-          id={post.id}
-          read={post.read}
+          post={post}
         />
       ))}
 

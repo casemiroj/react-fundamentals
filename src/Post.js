@@ -6,25 +6,34 @@ export default function Post(props) {
     <> 
       <article>
         <strong>
-          {props.read && <s>{props.title}</s>}
-          {!props.read && props.title}
+          {props.post.read && <s>{props.post.title}</s>}
+          {!props.post.read && props.post.title}
         </strong>
-        <button onClick={() => props.onRemove(props.id)}>Remover</button>
+        
+        <button onClick={() => props.onRemove(props.post.id)}>Remover</button>
+        
         <br />
-        <small>{props.subtitle}</small>
+        
+        <small>{props.post.subtitle}</small>
+        
         <br />
-        Likes: {props.likes}
+        
+        Likes: {props.post.likes}
       </article>
+      
       <br />
     </>
   );
 }
 
 Post.propTypes = {
-  likes: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
-  read: PropTypes.bool.isRequired,
   onRemove: PropTypes.func.isRequired,
+  post: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
+    read: PropTypes.bool.isRequired,
+
+  }).isRequired,
 }
