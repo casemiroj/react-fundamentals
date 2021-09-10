@@ -4,9 +4,9 @@ import Header from './Header';
 
 function App() {
   const [posts, setPosts] = useState([
-    { id: Math.random(), title: 'Title#01', subtitle: 'Subtitle#01', likes: 20 },
-    { id: Math.random(), title: 'Title#02', subtitle: 'Subtitle#02', likes: 40 },
-    { id: Math.random(), title: 'Title#03', subtitle: 'Subtitle#03', likes: 60 },
+    { id: Math.random(), title: 'Title#01', subtitle: 'Subtitle#01', likes: 20, read: false },
+    { id: Math.random(), title: 'Title#02', subtitle: 'Subtitle#02', likes: 40, read: true },
+    { id: Math.random(), title: 'Title#03', subtitle: 'Subtitle#03', likes: 60, read: false },
   ]);
 
   function handleRefresh() {
@@ -46,6 +46,7 @@ function App() {
           subtitle={post.subtitle}
           likes={post.likes}
           id={post.id}
+          read={post.read}
         />
       ))}
 

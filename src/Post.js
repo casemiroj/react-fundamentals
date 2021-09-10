@@ -5,7 +5,10 @@ export default function Post(props) {
   return(
     <> 
       <article>
-        <strong>{props.title}</strong>
+        <strong>
+          {props.read && <s>{props.title}</s>}
+          {!props.read && props.title}
+        </strong>
         <button onClick={() => props.onRemove(props.id)}>Remover</button>
         <br />
         <small>{props.subtitle}</small>
@@ -22,5 +25,6 @@ Post.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
+  read: PropTypes.bool.isRequired,
   onRemove: PropTypes.func.isRequired,
 }
