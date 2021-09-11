@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Post from './Post';
 import Header from './Header';
+import { ThemeProvider } from './ThemeContext';
+
+
 
 function App() {
   const [posts, setPosts] = useState([
@@ -8,6 +11,8 @@ function App() {
     { id: Math.random(), title: 'Title#02', subtitle: 'Subtitle#02', likes: 40, read: true },
     { id: Math.random(), title: 'Title#03', subtitle: 'Subtitle#03', likes: 60, read: false },
   ]);
+
+ 
 
   function handleRefresh() {
     setPosts(prevState => [
@@ -29,7 +34,7 @@ function App() {
   }
 
   return (
-    <>
+    <ThemeProvider>
       <Header>
         <h2>
           Posts da Semana
@@ -46,8 +51,7 @@ function App() {
           post={post}
         />
       ))}
-
-    </>
+    </ThemeProvider>
   );
 }
 
